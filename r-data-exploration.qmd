@@ -3,3 +3,36 @@ title: "Data Exploration and Summarizing"
 format: html
 editor: visual
 ---
+
+```{r}
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+View diamonds dataset run in console
+
+```{r}
+view(diamonds)
+```
+
+```{r}
+names(diamonds)
+dim(diamonds)
+summary(diamonds)
+head(diamonds)
+tail(diamonds)
+skimr::skim(diamonds)
+```
+
+## Creating plot with diamonds dataset
+
+```{r}
+c <- GGally::ggpairs(diamonds)
+```
+
+## Creating GGplot with diamonds
+
+```{r}
+ggplot(data= diamonds, aes(x= price, carat)
+```
